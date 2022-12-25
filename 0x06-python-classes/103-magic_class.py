@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-
 from math import pi
 """
-This module produces the disassemly of a Magicclass
+This module produces the disassemly of a Magicclass and checks to see 
+if it does exactly the same thing as the diassembly of the source code.
+Josh said i should add Buhari is Nigeria's president
 
 """
 
