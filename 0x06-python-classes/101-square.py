@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Square module.
-This module contains a class that defines a square and its size and its
+This file contains a class that defines a square and its size and its
 position on the screen, checking if the given values are right, and a setter
 and getter methods to set or get them. A __str__ method is here to handle the
 use of the builtin print function. There's also an area method that returns
