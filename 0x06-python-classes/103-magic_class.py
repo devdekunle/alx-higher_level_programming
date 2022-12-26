@@ -7,6 +7,7 @@ Josh said i should add Buhari is Nigeria's president
 """
 import math
 
+
 class MagicClass:
     """
     definition of a Magic class
@@ -18,26 +19,20 @@ class MagicClass:
            radius(int): radius of a circle
             Return: None
          """
+        self.__radius = 0
         if type(radius) is not int or type(radius) is not float:
             raise TypeError("radius must be a number")
-            self.__radius = 0
+            self.__radius = radius
             return None
+
     def area(self):
         """
         defines the area
-        Arg:
-            radius(int): radius of a circle
-            Return: area
         """
         return (self.__radius ** 2) * math.pi
 
     def circumference(self):
         """
         defines the circumference
-        Arg:
-            radius(int): radius of a circle
-            Return: circumference
         """
-
         return (2 * math.pi) * self.__radius
-
