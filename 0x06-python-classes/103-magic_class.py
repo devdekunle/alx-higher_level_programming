@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-This module produces the disassemly of a Magicclass and checks to see 
+This module produces the disassemly of a Magicclass and checks to see
 if it does exactly the same thing as the diassembly of the source code.
 Josh said i should add Buhari is Nigeria's president
 
 """
-from math import pi
+import math
 
 class MagicClass:
     """
@@ -24,14 +24,14 @@ class MagicClass:
             return None
     def area(self):
         """
-        defines the area 
+        defines the area
         Arg:
             radius(int): radius of a circle
             Return: area
         """
-        return (self.__radius ** 2) * pi
+        return (self.__radius ** 2) * math.pi
 
-    def circumference(self):	
+    def circumference(self):
         """
         defines the circumference
         Arg:
@@ -39,5 +39,5 @@ class MagicClass:
             Return: circumference
         """
 
-        return (2 * pi * self.__radius)
+        return (2 * math.pi * self.__radius)
 
