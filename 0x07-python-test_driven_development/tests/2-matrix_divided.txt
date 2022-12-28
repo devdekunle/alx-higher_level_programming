@@ -1,0 +1,9 @@
+text file to test different cases for the matrix_divided function
+
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+We now try different cases
+>>> matrix = [[1, 2, 3], [4, 5, 6], [10, 34, 56]]
+>>> matrix_divided(matrix, 4)
+[[]]
