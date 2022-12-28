@@ -1,5 +1,10 @@
 #!usr/bin/python3
-""" This module contains a function that adds 2 integers"""
+""" This module contains a function that adds 2 integers
+    and also checking all possible edge cases for different 
+    values of a and b.
+    it also typecasts the value if it is a float so as to esure that the returned
+    value is an integert
+"""
 def add_integer(a, b=98):
     """This function adds two integers
     Args:
