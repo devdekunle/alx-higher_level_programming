@@ -4,11 +4,11 @@ This txt file is used to test all cases for the say_my_name function
 
 Now we test them 
 >>> say_my_name("Samuel", "Abraham") #doctest: +NORMALIZE_WHITESPACE
-    Samuel Abraham
+    My name is Samuel Abraham
 >>> say_my_name("Samuel") #doctest: +NORMALIZE_WHITESPACE
-    Samuel
+    My name is Samuel
 >>> say_my_name("", "Abraham") #doctest: +NORMALIZE_WHITESPACE
-    Abraham
+    My name is Abraham
 >>> say_my_name(9, "Abraham")
 Traceback (most recent call last):
     ...
