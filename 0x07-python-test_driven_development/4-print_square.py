@@ -20,4 +20,5 @@ def print_square(size):
     elif size is None:
         raise TypeError("print_square() missing 1 required positional arguement: 'size'")
     else:
-        print(f"{size * '#'}")
+        for i in range(size):
+          print(f"{size * '#'}")
