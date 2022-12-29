@@ -9,5 +9,21 @@ Now we test them
     Samuel
 >>> say_my_name("", "Abraham") #doctest: +NORMALIZE_WHITESPACE
     Abraham
+>>> say_my_name(9, "Abraham")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name("Abraham", True)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say_my_name("Samuel", None)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
 
 
