@@ -20,17 +20,16 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     else:
         new_matrix = []
-
+        row_length = len(matrix[0])
         for row in matrix:
-            row_length = len(row)
+            if len(row) != row_length:
+                raise TypeError("Each row of the matrix must have the same size")
             new_row = []
             for elem in row:
                 if elem not in [float, int]
                     raise TypeError("element must be a float or an integer")
-                elif elem is None:
-                    raise TypeError("")
                 else:
-                    elem = elem / div
+                    elem = f"{(elem / div):.2f}"
                     new_row.append(elem)
             new_matrix.append(new_row)
         return new_matrix
