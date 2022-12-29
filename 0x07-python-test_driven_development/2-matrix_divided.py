@@ -12,7 +12,7 @@ def matrix_divided(matrix, div):
     div: number to divide each element of the matrix
     Return: new_matrix"""
 
-    if type(matrix) is not list[list[]]:
+    if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     elif type(div) not in [int, float]:
         raise TypeError("div must be a number")
@@ -26,7 +26,7 @@ def matrix_divided(matrix, div):
                 raise TypeError("Each row of the matrix must have the same size")
             new_row = []
             for elem in row:
-                if elem not in [float, int]
+                if elem not in [float, int]:
                     raise TypeError("element must be a float or an integer")
                 else:
                     elem = f"{(elem / div):.2f}"
