@@ -18,6 +18,8 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
+    elif div is None:
+        raise TypeError("matrix_divided() missing 1 required positional argument: 'div'")
     else:
         new_matrix = []
         row_length = len(matrix[0])
@@ -26,10 +28,11 @@ def matrix_divided(matrix, div):
                 raise TypeError("Each row of the matrix must have the same size")
             new_row = []
             for elem in row:
-                if elem not in [float, int]:
+                
+                if type(elem) not in [float, int]:
                     raise TypeError("element must be a float or an integer")
                 else:
-                    elem = f"{(elem / div):.2f}"
+                    elem = round((elem / div), 2)
                     new_row.append(elem)
             new_matrix.append(new_row)
         return new_matrix
