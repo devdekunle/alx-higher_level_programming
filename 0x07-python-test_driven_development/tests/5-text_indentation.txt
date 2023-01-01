@@ -12,4 +12,8 @@ now we test them
 case 1:
 
 >>> text_indentation("My name is samuel. What else can i say?")
+My name is samuel.
+<BLANKLINE>
+What else can i say?
+<BLANKLINE>
 
