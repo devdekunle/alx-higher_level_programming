@@ -9,21 +9,28 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    elif text is None:
-        raise TypeError(" text_indentation missing 1 required positional argument: 'text'")
     else:
         i = 0
         new_text = ""
         while (i < len(text)):
-                
             if text[i] not in [":", "?", "."]:
+                if text[i] == " " and i == 0:
+                    while text[i] == " ":
+                        i += 1
+                    continue
                 new_text += text[i]
             elif text[i] in [":", "?", "."]:
-                new_text += text[i] + (2 * "\n")
-                i += 1
-                if text[i] == " ":
-                    while(text[i] == " "):
+                new_text += text[i] + (2 * '\n')
+                
+                if i == len(text) - 1:
+                    break
+                    
+                elif text[i + 1] == " ":
                         i += 1
-                continue
+                        while text[i] == " ":
+                            if i == len(text) - 1:
+                                break
+                            i += 1
+                        continue
             i += 1
-        print(new_text)               
+        print(f"{new_text}", end='')               

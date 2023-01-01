@@ -1,0 +1,15 @@
+===========================================================================
+This file contains test cases for the text_indentation function located in the 5-text_indentation module
+===========================================================================
+
+first we import the module
+============================================================================
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+==========================================================================
+now we test them
+=========================================================================
+case 1:
+
+>>> text_indentation("My name is samuel. What else can i say?")
+
