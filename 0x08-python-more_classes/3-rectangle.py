@@ -83,6 +83,8 @@ class Rectangle:
         Return: ptr_rect
         """
         ptr_rect = ""
+        if self.width == 0 or self.height == 0:
+            return ptr_rect
         for i in range(self.height):
             ptr_rect += (self.width * "#") + "\n"
         return ptr_rect[:-1]
