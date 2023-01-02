@@ -21,10 +21,8 @@ def text_indentation(text):
                 new_text += text[i]
             elif text[i] in [":", "?", "."]:
                 new_text += text[i] + (2 * '\n')
-                
                 if i == len(text) - 1:
                     break
-                    
                 elif text[i + 1] == " ":
                         i += 1
                         while text[i] == " ":
