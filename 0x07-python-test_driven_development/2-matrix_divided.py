@@ -5,7 +5,7 @@ and returns a new matrix with the values of the divided elements.
 The function also considers different cases and also edge cases which could
 limit the effectiveness of the program.
 """
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=None, div=None):
     """ This function divides each element of the matix by div
     Arg: 
     matrix: a list of lists
