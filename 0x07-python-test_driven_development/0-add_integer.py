@@ -16,6 +16,5 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     elif type(b) not in [int, float]:
        raise TypeError("b must be an integer")
-    elif a is None:
-        raise TypeError("add_integer() missing 1 required positional argument: 'a'")
-    return (int(a) + int(b))
+    else:
+        return (int(a) + int(b))

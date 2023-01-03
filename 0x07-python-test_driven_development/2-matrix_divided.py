@@ -18,8 +18,6 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
-    elif div is None:
-        raise TypeError("matrix_divided() missing 1 required positional argument: 'div'")
     else:
         new_matrix = []
         row_length = len(matrix[0])
