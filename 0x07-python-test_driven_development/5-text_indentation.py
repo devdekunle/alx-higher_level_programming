@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This module contains the function which checks for the characters . : and ? and adds a new line after the characters thereby indrnting the text.
 """
-def text_indentation(text):
+def text_indentation(text=None):
     """This function indents the text psssed as aruguement and prints the indented text
     Args: 
     text: the text to be indented
