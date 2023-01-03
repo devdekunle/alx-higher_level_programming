@@ -5,13 +5,15 @@
     it also typecasts the value if it is a float so as to esure that the returned
     value is an integert
 """
-def add_integer(a=None, b=98):
+def add_integer(a, b=98 ,*args):
     """This function adds two integers
     Args:
     a: First  arguement
     b:second arguement
     Return: sum
     """
+    if len(args) < 1:
+        raise ValueError("add_integer needs at least one argument")
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
     elif type(b) not in [int, float]:
