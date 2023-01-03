@@ -116,14 +116,15 @@ class Rectangle:
         rect_2: second rectangle
         Return: biggest area
         """
-        if type(rect_1) is not Rectangle:
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        elif type(rect_2) is not Rectangle:
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        elif rect_1.area() == rect_2.area():
-            return rect_1
-        else:
-            if rect_1.area() > rect_2.area():
-                return rect_1.area()
+        if rect_1 is not None or rect_2 is not None:
+            if type(rect_1) is not Rectangle:
+                raise TypeError("rect_1 must be an instance of Rectangle")
+            elif type(rect_2) is not Rectangle:
+                raise TypeError("rect_2 must be an instance of Rectangle")
+            elif rect_1.area() == rect_2.area():
+                return rect_1
             else:
-                return rect_2.area()
+                if rect_1.area() > rect_2.area():
+                    return rect_1.area()
+                else:
+                    return rect_2.area()
