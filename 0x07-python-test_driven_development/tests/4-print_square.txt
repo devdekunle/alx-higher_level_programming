@@ -14,7 +14,7 @@ Now we test different cases
 >>> print_square()
 Traceback (most recent call last):
     ...
-TypeError: print_square() missing 1 required positional argument: 'size'
+TypeError: size must be an integer
 >>> print_square(0)
 
 >>> print_square(-1)

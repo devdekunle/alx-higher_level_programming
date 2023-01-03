@@ -5,7 +5,7 @@
     that the function works effectively.
 """
 
-def print_square(size):
+def print_square(size=None):
     """method which creates a square based on the size
     Args:
     size: the size of the square to print
@@ -17,8 +17,6 @@ def print_square(size):
         raise ValueError("size must be >= 0")
     elif type(size) is float and size < 0:
         raise TypeError("size must be an integer")
-    elif size is None:
-        raise TypeError("print_square() missing 1 required positional arguement: 'size'")
     else:
         for i in range(size):
           print(f"{size * '#'}")
