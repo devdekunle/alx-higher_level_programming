@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" This module cotains the function which prints a square based 
+"""This module cotains the function which prints a square based
     on the size that has been passed to the function.
     It also checks all possible egde cases to make sure
     that the function works effectively.
 """
+
 
 def print_square(size=None):
     """method which creates a square based on the size
@@ -19,4 +20,4 @@ def print_square(size=None):
         raise TypeError("size must be an integer")
     else:
         for i in range(size):
-          print(f"{size * '#'}")
+            print(f"{size * '#'}")
