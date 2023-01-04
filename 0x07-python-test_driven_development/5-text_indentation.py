@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""This module contains the function which checks for the characters . : and ? and adds a new line after the characters thereby indrnting the text.
+"""This module contains the function which checks for the characters
+. : and ? and adds a new line after the characters thereby
+indrnting the text.
 """
+
+
 def text_indentation(text=None):
-    """This function indents the text psssed as aruguement and prints the indented text
-    Args: 
+    """This function indents the text psssed as
+    aruguement and prints the indented text
+    Args:
     text: the text to be indented
     Return: Nothing
     """
@@ -24,11 +29,11 @@ def text_indentation(text=None):
                 if i == len(text) - 1:
                     break
                 elif text[i + 1] == " ":
+                    i += 1
+                    while text[i] == " ":
+                        if i == len(text) - 1:
+                            break
                         i += 1
-                        while text[i] == " ":
-                            if i == len(text) - 1:
-                                break
-                            i += 1
-                        continue
+                    continue
             i += 1
-        print(f"{new_text}", end='')               
+        print(f"{new_text}", end='')
