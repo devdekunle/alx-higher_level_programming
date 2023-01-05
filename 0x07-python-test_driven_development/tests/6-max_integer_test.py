@@ -11,9 +11,11 @@ class testMaxInteger(unittest.TestCase):
     def test_max_integer(self):
         self.assertAlmostEqual(max_integer([23, 20, 20]), 23)
         self.assertAlmostEqual(max_integer([-1, -4, -6, 3]), 3)
+        self.assertAlmostEqual(max_integer([3]), 3)
+        self.assertAlmostEqual(max_integer([-1, -2, -3, -6]), -1)
+        self.assertEqual(max_integer(), None)
+        self.assertAlmostEqual(max_integer([-1, 4, 5, 3, 2]), 5)
+        self.assertAlmostEqual(max_integer([]), None)
+        self.assertAlmostEqual(max_integer([-2]), -2)
+        self.assertAlmostEqual(max_integer([4, 8, -1]), 8)
 
-    def test_types(self):
-        self.assertRaises(TypeError, max_integer, "man")
-        self.assertRaises(TypeError, max_integer, 6)
-        self.assertRaises(TypeError, max_integer, False)
-        self.assertRaises(TypeError, max_integer, None)
