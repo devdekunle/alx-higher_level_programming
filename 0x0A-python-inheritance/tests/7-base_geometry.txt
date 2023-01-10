@@ -66,7 +66,7 @@ TypeError: distance must be an integer
 case 9:
 Test if value is a tuple
 >>> bg = BaseGeometry
->>> bg.integer_validator("height", (4,))
+>>> bg.integer_validator("age",(4,))
 Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
