@@ -95,3 +95,11 @@ Traceback (most recent call last):
 ValueError: id must be greater than 0
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("id", 1)
+
+Case 13:
+Test area() method
+>>> bg = BaseGeometry()
+>>> bg.area() #doctest +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
