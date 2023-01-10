@@ -4,4 +4,6 @@
 
 
 def lookup(obj):
+	""" This method returns all the attributest and methods present 
+		in obj"""
 	return dir(obj)
