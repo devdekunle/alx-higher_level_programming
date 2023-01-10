@@ -46,3 +46,52 @@ test if value is a float
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
+
+case 7
+test if value is a dictionary
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("size", {4, 5})
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+case 8:
+test if value is a list
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("distance", [5])
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
+
+case 9:
+Test if value is a tuple
+>>> bg = BaseGeometry
+>>> bg.integer_validator("height", (4,))
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+case 10:
+test if value is a None
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("scope", None)
+Traceback (most recent call last):
+    ...
+TypeError: scope must be an integer
+
+case 11:
+Test if value is a boolean
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("id", True)
+Traceback (most recent call last):
+    ...
+TypeError: id must be an integer
+
+case 12:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("id", 0)
+Traceback (most recent call last):
+    ...
+ValueError: id must be greater than 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("id", 1)
