@@ -10,9 +10,6 @@ class MyList(list):
         """initialize the object using the preferred class"""
         super().__init__()
 
-
     def print_sorted(self):
         """This method returns a sorted list"""
         print(sorted(self))
-        
-
