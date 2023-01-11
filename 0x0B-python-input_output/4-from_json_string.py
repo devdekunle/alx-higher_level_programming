@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module to deserialize a string. That is to convert it from a string 
+""" Module to deserialize a string. That is to convert it from a string
     to an object"""
 
 import json
