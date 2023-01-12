@@ -14,4 +14,3 @@ class Student:
     def to_json(self):
         """receives dictionary representation"""
         return self.__dict__.copy()
-        
