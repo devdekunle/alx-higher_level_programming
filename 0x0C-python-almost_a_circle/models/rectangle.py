@@ -119,5 +119,3 @@ class Rectangle(Base):
                     setattr(self, "x", value)
                 elif key == "y":
                     setattr(self, "y", value)
-
-
