@@ -81,7 +81,6 @@ class Rectangle(Base):
         """ method to return the area of a rectangle"""
         return self.height * self.width
 
-
     def display(self):
         """ function to display the rectangle"""
         for i in range(self.y):
@@ -92,5 +91,33 @@ class Rectangle(Base):
 
     def __str__(self):
         """"make object printable"""
-        string = f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-        return string
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
+        """function to add variable number of arguments"""
+        if len(args) > 0:
+            for i, val in enumerate(args):
+                if i == 0:
+                    setattr(self, "id", val)
+                elif i == 1:
+                    setattr(self, "width", val)
+                elif i == 2:
+                    setattr(self, "height", val)
+                elif i == 3:
+                    setattr(self, "x", val)
+                elif i == 4:
+                    setattr(self, "y", val)
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    setattr(self, "id", value)
+                elif key == "width":
+                    setattr(self, "width", value)
+                elif key == "height":
+                    setattr(self, "height", value)
+                elif key == "x":
+                    setattr(self, "x", value)
+                elif key == "y":
+                    setattr(self, "y", value)
+
+
