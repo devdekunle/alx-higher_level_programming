@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-""" This module contains the rectangle class 
+""" This module contains the rectangle class
     which inherits from thr base class"""
 
 
 from models.base import Base
 
-class Rectangle(Base):
-    """ definition of Rectangle which is subclass of base"""
 
+class Rectangle(Base):
+
+    """ definition of Rectangle which is subclass of base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """object instantiation"""
         super().__init__(id)
@@ -41,8 +42,8 @@ class Rectangle(Base):
         """Method to set the value of width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        elif value < 0:
-                raise TypeError("width must be >= 0")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
         else:
             self.__width = value
 
@@ -51,8 +52,8 @@ class Rectangle(Base):
         """Method to set the value of height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        elif value < 0:
-            raise ValueError("height must be >= 0")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
         else:
             self.__height = value
 
