@@ -33,7 +33,7 @@ class Square(Rectangle):
         """method to make object printable"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
 
-    def update(self, *args, *kwargs):
+    def update(self, *args, **kwargs):
         """ method to update the values of the instance attributes"""
         if len(args) > 0:
             for i, val in enumerate(args):
@@ -41,9 +41,9 @@ class Square(Rectangle):
                     setattr(self, "id", val)
                 elif i == 1:
                     setattr(self, "size", val)
-                elif i = 2:
+                elif i == 2:
                     setattr(self, "x", val)
-                elif i = 3:
+                elif i == 3:
                     setattr(self, "y", val)
         else:
             for key, value in kwargs.items():
@@ -55,3 +55,6 @@ class Square(Rectangle):
                     setattr(self, "y", value)
                 elif key == "size":
                     setattr(self, "size", value)
+    def to_dictionary(self):
+        """returns the dictionary representation of a class"""
+        return self.__dict__
