@@ -67,4 +67,23 @@ class Base:
         dummy_inst = cls(3, 4, 1, 2)
         dummy_inst.update(**dictionary)
         return dummy_inst
-
+    
+    @classmethod
+    def load_from_file(cls):
+        """class method to return a list of instances"""
+        if os.path.exists(f"{cls.__name__}.json"):
+            with open(f"{cls.__name__}.json", "r", encoding="utf-8") as my_file:
+                """store string read from file"""
+                string_inst_dict = my_file.read()
+        else:
+            return ""
+        """ call from_json_string and convert string read from file
+            to list and assign return list of dictionaries
+            to list_inst_dict"""
+        list_inst_dict = cls.from_json_string(string_inst_dict)
+        inst_list = []
+        """loop throught each dictionary in the list and creat an instance"""
+        for ins_dict in list_inst_dict:
+            """append each created instance to inst_list"""
+            inst_list.append(cls.create(**ins_dict))
+        return inst_list
