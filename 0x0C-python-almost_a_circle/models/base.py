@@ -53,7 +53,7 @@ class Base:
         json_str = cls.to_json_string(dict_list)
         with open(f"{cls.__name__}.json","w", encoding="utf-8") as my_file:
             my_file.write(json_str)
-           
+
     @staticmethod
     def from_json_string(json_string):
         """Returns the list representation of s json string"""
@@ -67,7 +67,7 @@ class Base:
         dummy_inst = cls(3, 4, 1, 2)
         dummy_inst.update(**dictionary)
         return dummy_inst
-    
+
     @classmethod
     def load_from_file(cls):
         """class method to return a list of instances"""
