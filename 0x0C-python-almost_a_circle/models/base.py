@@ -36,7 +36,7 @@ class Base:
         """write the json string representation of an object to a file"""
         if list_objs is None:
             with open(f"{cls.__name__}.json", "w") as my_file:
-                my_file.write("[]")
+                my_file.write([])
         if type(list_objs) is not list:
             raise TypeError("list_objs must be a list of objects")
         dict_list = []
