@@ -4,6 +4,7 @@
 import json
 import os
 
+
 class Base:
     """class base"""
     __nb_objects = 0
@@ -21,11 +22,12 @@ class Base:
         """returns the json string of list dictionaries"""
         if type(list_dictionaries) is not list:
             raise TypeError("list_dictionaries must be a list of dictionaries")
-        if len(list_dictionaries) == 0 or list_dictionaries == None:
+        if len(list_dictionaries) == 0 or list_dictionaries is None:
             return "[]"
         for i in list_dictionaries:
             if type(i) is not dict:
-                raise TypeError("list_dictionaries must be a list of dictionaries")
+                raise TypeError("list_dictionaries must be a\
+                                list of dictionaries")
         else:
             return json.dumps(list_dictionaries)
 
@@ -33,7 +35,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """write the json string representation of an object to a file"""
         if list_objs is None:
-            with open(f"{cls.__name__}.json", "w", encoding="utf-8") as my_file:
+            with open(f"{cls.__name__}.json", "w") as my_file:
                 my_file.write("[]")
         if type(list_objs) is not list:
             raise TypeError("list_objs must be a list of objects")
@@ -51,7 +53,7 @@ class Base:
         """save list to json file after appending all object
         dictionaries to list"""
         json_str = cls.to_json_string(dict_list)
-        with open(f"{cls.__name__}.json","w", encoding="utf-8") as my_file:
+        with open(f"{cls.__name__}.json", "w") as my_file:
             my_file.write(json_str)
 
     @staticmethod
@@ -72,7 +74,7 @@ class Base:
     def load_from_file(cls):
         """class method to return a list of instances"""
         if os.path.exists(f"{cls.__name__}.json"):
-            with open(f"{cls.__name__}.json", "r", encoding="utf-8") as my_file:
+            with open(f"{cls.__name__}.json", "r") as my_file:
                 """store string read from file"""
                 string_inst_dict = my_file.read()
         else:
