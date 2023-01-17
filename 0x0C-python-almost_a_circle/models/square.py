@@ -55,6 +55,7 @@ class Square(Rectangle):
                     setattr(self, "y", value)
                 elif key == "size":
                     setattr(self, "size", value)
+
     def to_dictionary(self):
         """returns the dictionary representation of a class"""
         square_dict = {}
