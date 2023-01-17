@@ -91,7 +91,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """"make object printable"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        i = "[Rectangle]"
+        b = self.id
+        return f"{i} ({b}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """function to add variable number of arguments"""
@@ -119,13 +121,14 @@ class Rectangle(Base):
                     setattr(self, "x", value)
                 elif key == "y":
                     setattr(self, "y", value)
+
     def to_dictionary(self):
         """method returns the dictionary representation
        of a Rectangle"""
-        d ={}
+        d = {}
         d['id'] = self.id
         d['width'] = self.width
-        d['height']= self.height
+        d['height'] = self.height
         d['x'] = self.x
         d['y'] = self.y
         return d
