@@ -17,6 +17,7 @@ class TestBase_instantaition(unittest.TestCase):
         b1 = Base()
         b3 = Base()
         self.assertEqual(b1.id, b3.id - 2)
+        print(b1.id, b3.id)
 
     def test_None(self):
         b1 = Base(None)
@@ -85,3 +86,40 @@ class Test_to_json_string(unittest.TestCase):
     def test_to_json_string_one_dictionary(self):
         r = Rectangle(20, 1, 3, 2, 5)
         self.assertTrue(len(Base.to_json_string([r.to_dictionary()])))
+
+    def test_to_json_string_two_dicts(self):
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        r2 = Rectangle(6, 7, 8, 9, 10)
+        dict_list = [r1.to_dictionary(), r2.to_dictionary()]
+        self.assertEqual(len(Base.to_json_string(dict_list)), 105)
+
+    def test_to_json_string_square_type(self):
+        s = Square(1, 2, 4, 5)
+        self.assertEqual(str, type(Base.to_json_string([s.to_dictionary()])))
+
+    def test_to_json_string_square_two_dictionaries(self):
+        s1 = Square(1, 2, 3, 5)
+        s2 = Square(3, 2, 4, 1)
+        dict_list = [s1.to_dictionary(), s2.to_dictionary()]
+        self.assertEqual(len(Base.to_json_string(dict_list)), 76)
+
+    def test_to_json_string_square_one_dictionary(self):
+        s = Square(1, 2, 4, 1)
+        self.assertEqual(len(Base.to_json_string([s.to_dictionary()])), 38)
+
+    def test_to_json_string_empty_list(self):
+        self.assertEqual(Base.to_json_string([]), "[]")
+
+    def test_to_json_string_none(self):
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_to_json_string_without_arg(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
+
+    def test_to_json_string_two_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string([], "name")
+
+            if __name__ == "__main__":
+                unittest.main()
