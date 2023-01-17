@@ -4,6 +4,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase_instantaition(unittest.TestCase):
     """tests for instantiation of Base Class"""
 
@@ -52,7 +53,7 @@ class TestBase_instantaition(unittest.TestCase):
         self.assertEqual(-3, Base(-3).id)
 
     def test_dict_id(self):
-        self.assertEqual({"h": 1, "a" : 2}, Base({"h" : 1, "a" : 2}).id)
+        self.assertEqual({"h": 1, "a": 2}, Base({"h": 1, "a": 2}).id)
 
     def test_bool_id(self):
         self.assertEqual(True, Base(True).id)
@@ -75,6 +76,7 @@ class TestBase_instantaition(unittest.TestCase):
     def test_two_args(self):
         with self.assertRaises(TypeError):
             Base(3, 4)
+
 
 class Test_to_json_string(unittest.TestCase):
     """Unittest to test conversion to json string"""
