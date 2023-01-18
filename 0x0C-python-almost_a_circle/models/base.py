@@ -68,9 +68,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with the attributes already set"""
-        if type(dictionary) is not dict:
-            raise TypeError("dictionary must be of type dict")
-        dummy_inst = cls(3, 4, 1, 2)
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+        dummy_inst = cls(1, 1)
+        else:
+            dummy_inst = cls(1)
         dummy_inst.update(**dictionary)
         return dummy_inst
 
