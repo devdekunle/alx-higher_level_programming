@@ -82,7 +82,7 @@ class Base:
                 """store string read from file"""
                 string_inst_dict = my_file.read()
         else:
-            return ""
+            return []
         """ call from_json_string and convert string read from file
             to list and assign return list of dictionaries
             to list_inst_dict"""
