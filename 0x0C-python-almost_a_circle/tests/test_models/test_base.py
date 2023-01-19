@@ -63,7 +63,7 @@ class TestBase_instantaition(unittest.TestCase):
     def test_list_id(self):
         self.assertEqual([4, 5, 2], Base([4, 5, 2]).id)
 
-    def test_list_tuple(self):
+    def test_tuple(self):
         self.assertEqual((1, 2), Base((1, 2)).id)
 
     def test_set_id(self):
