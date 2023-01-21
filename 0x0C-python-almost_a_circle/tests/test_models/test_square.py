@@ -1,10 +1,12 @@
-"""This module contains the tests cases for the Square class and it 
-    also checks for all the possible edge cases for all the 
+"""This module contains the tests cases for the Square class and it
+    also checks for all the possible edge cases for all the
     methods in the class"""
 import unittest
 from models.base import Base
 from models.square import Square
 import io
+
+
 class TestSquare_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Square class."""
 
@@ -135,6 +137,7 @@ class TestSquare_x(unittest.TestCase):
     def test_tuple_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, (1, 2, 3))
+
 
 class TestSquare_y(unittest.TestCase):
     """Unittests for testing initialization of Square y attribute."""
@@ -341,4 +344,3 @@ class TestSquare_update_kwargs(unittest.TestCase):
         s.update(id=None, size=7, x=18)
         correct = "[Square] ({}) 18/10 - 7".format(s.id)
         self.assertEqual(correct, str(s))
-

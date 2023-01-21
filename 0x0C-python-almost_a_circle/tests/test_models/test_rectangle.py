@@ -251,6 +251,7 @@ class TestRectangle_x(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(1, 2, (1, 2, 3), 2)
 
+
 class TestRectangle_y(unittest.TestCase):
     """Unittests for testing initialization of Rectangle y attribute."""
 
@@ -423,6 +424,7 @@ class TestRectangle_update_args(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r.update(89, 1, 2, "invalid", "invalid")
 
+
 class TestRectangle_update_kwargs(unittest.TestCase):
     """Unittests for testing update kwargs method of the Rectangle class."""
 
@@ -553,4 +555,3 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r = Rectangle(10, 2, 4, 1, 2)
         with self.assertRaises(TypeError):
             r.to_dictionary(1)
-
