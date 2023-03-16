@@ -11,9 +11,7 @@ Create an instance method called print() that prints the rectangle using the cha
 */
 module.exports = class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0 || w === undefined || h === undefined) {
-      const newObject = {};
-    } else {
+    if (w >= 0 && h >= 0 && w !== undefined && h !== undefined) {
       this.width = w;
       this.height = h;
     }
