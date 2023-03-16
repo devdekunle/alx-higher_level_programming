@@ -27,24 +27,19 @@ module.exports = class Rectangle {
     }
 
     // print concatenated string
-	let j = this.height;
-	while (j > 0) {
-	console.log(symbol);
-	j--;
-
-
-	}
-
+    let j = this.height;
+    while (j > 0) {
+      console.log(symbol);
+      j--;
+    }
   }
 
   double () {
-  this.height *= 2;
-  this.width *= 2;
+    this.height *= 2;
+    this.width *= 2;
   }
 
   rotate () {
-  [this.width, this.height] = [this.height, this.width];
+    [this.width, this.height] = [this.height, this.width];
   }
-
-
 };
