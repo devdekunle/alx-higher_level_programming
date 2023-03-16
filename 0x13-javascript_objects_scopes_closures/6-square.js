@@ -4,17 +4,16 @@ Write a class Square that defines a square and inherits from Rectangle of 4-rect
 You must use the class notation for defining your class and extends
 The constructor must take 1 argument: size
 The constructor of Rectangle must be called (by using super())
-
 */
 // imports the rectangle module
-const Rectangle = require('./5-square');
-module.exports = class Square extends Rectangle {
+const OldSquare = require('./5-square');
+
+module.exports = class Square extends OldSquare {
   constructor (size) {
     super(size, size);
   }
 
   double () {
-
   super.double();
   }
 
