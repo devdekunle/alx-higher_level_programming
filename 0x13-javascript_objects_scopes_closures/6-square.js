@@ -13,6 +13,10 @@ module.exports = class Square extends Rectangle {
     super(size, size);
   }
 
+  double () {
+  super.double();
+  }
+
   charPrint (c) {
     if (c === undefined) {
       super.print();
