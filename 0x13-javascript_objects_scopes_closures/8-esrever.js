@@ -8,16 +8,16 @@ You are not allow to use the built-in method reverse
 
 exports.esrever = function (list) {
   if (list === undefined) {
-  return null;
+    return null;
   } else {
-  new_list = [];
-  size_list = list.length;
-  while (size_list => 0) {
-  list.push(list[size]);
-  --size_list;
+    const reversedList = [];
+    let lastElement = list.length - 1;
+    let i = 0;
+    while (lastElement >= 0) {
+      reversedList[i] = list[lastElement];
+      --lastElement;
+      ++i;
+    }
+    return reversedList;
   }
-
-
-  }
-
-}
+};
