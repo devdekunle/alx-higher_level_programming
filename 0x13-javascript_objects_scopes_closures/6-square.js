@@ -14,7 +14,7 @@ module.exports = class Square extends OldSquare {
   }
 
   double () {
-  super.double();
+    super.double();
   }
 
   charPrint (c) {
