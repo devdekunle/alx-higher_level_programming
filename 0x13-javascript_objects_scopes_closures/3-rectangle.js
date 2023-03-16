@@ -22,7 +22,7 @@ module.exports = class Rectangle {
   print () {
     let symbol = 'X';
     // concatenate X to symbol
-    for (let i = 0; i < this.width; i++) {
+    for (let i = 1; i < this.width; i++) {
       symbol += 'X';
     }
 
