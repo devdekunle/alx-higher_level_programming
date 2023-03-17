@@ -15,12 +15,12 @@ if __name__ == "__main__":
     Access the database and print all states
     in the states table
     '''
-    db = MySQLdb.connect(host='localhost', port=3306,
-         user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
+
     db_cur = db.cursor()
     db_cur.execute('SELECT * FROM states ORDER BY states.id ASC')
     rows = db_cur.fetchall()
-
 
     for row in rows:
         print(row)
