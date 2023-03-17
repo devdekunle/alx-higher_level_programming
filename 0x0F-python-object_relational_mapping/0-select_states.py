@@ -8,6 +8,10 @@ Results must be sorted in ascending order by states.id
 Results must be displayed as they are in the example below
 Your code should not be executed when imported'''
 if __name__ == "__main__":
+    '''
+    Access the database and print all states
+    in the states table
+    '''
     import MySQLdb
     import sys
     db = MySQLdb.connect(host='localhost', port=3306,
