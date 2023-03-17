@@ -11,6 +11,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+
     '''
     Access the database and print all states
     in the states table
