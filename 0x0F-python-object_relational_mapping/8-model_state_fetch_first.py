@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).filter(State.id == 1)
-    if result == None:
+    if result is None:
         print('Nothing')
     for instance in result:
         print(f"{instance.id}: {instance.name}")
