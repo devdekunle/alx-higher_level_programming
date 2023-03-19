@@ -37,9 +37,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    result = session.query(State).filter(State.id == 1)
+    result = session.query(State).order_by(State.id).first()
     if result is None:
         print('Nothing')
     else:
-        for instance in result:
-            print(f"{instance.id}: {instance.name}")
+        print(f"{result.id}: {result.name}")
