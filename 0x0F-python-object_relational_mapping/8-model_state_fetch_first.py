@@ -24,5 +24,6 @@ if __name__ == "__main__":
     result = session.query(State).filter(State.id == 1)
     if result is None:
         print('Nothing')
-    for instance in result:
-        print(f"{instance.id}: {instance.name}")
+    else:
+        for instance in result:
+            print(f"{instance.id}: {instance.name}")
