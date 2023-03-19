@@ -24,18 +24,15 @@ if __name__ == "__main__":
 
     db_uri = (f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
     engine = create_engine(db_uri)
-    Base.metadata.create_all(bind=engine)
 
     Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    new_state = State(id=6, name="Louisiana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
 
     session.commit()
 
-    new_instance = session.query(State)
-    value = new_instance.filter(State.name == 'Louisiana').first()
-
-    print(f"{value.id}")
+    print(f"{new_state.id}")
+    session.close()
