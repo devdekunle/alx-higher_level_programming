@@ -11,7 +11,7 @@ from sys import argv
 
 if __name__ == "__main__":
     """
-    list the first state
+    list the first state from the database hbtn_0e_6_usa
     """
     db_uri = ('mysql+mysqldb://{}:{}@localhost/{}'.format
               (argv[1], argv[2], argv[3]))
