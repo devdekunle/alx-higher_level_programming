@@ -17,4 +17,4 @@ if __name__ == "__main__":
         print("Body response:")
         print(f'\t- type: {type(body_response)}')
         print(f'\t- content: {body_response}')
-        print(f'\t- uft8 content: {body_response.decode("utf-8")}')
+        print(f'\t- utf8 content: {body_response.decode("utf-8")}')
