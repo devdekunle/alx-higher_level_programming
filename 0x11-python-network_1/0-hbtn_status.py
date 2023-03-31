@@ -12,11 +12,9 @@ if __name__ == "__main__":
 
     import urllib.request as request
 
-
     with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
         body_response = response.read()
         print("Body response:")
         print(f'\t- type: {type(body_response)}')
         print(f'\t- content: {body_response}')
         print(f'\t- uft8 content: {body_response.decode("utf-8")}')
-
