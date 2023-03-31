@@ -20,5 +20,5 @@ if __name__ == "__main__":
     url = argv[1]
     data = {}
     data['email'] = argv[2]
-    response = requests.post(argv[1], params=data)
+    response = requests.get(argv[1], params=data)
     print(response.text)
