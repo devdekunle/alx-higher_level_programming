@@ -14,10 +14,14 @@ if __name__ == "__main__":
     import urllib.error as error
     from sys import argv
 
-    url = argv[1]
+    url = request.Request(argv[1])
+
     try:
         with request.urlopen(url) as response:
-            print(response.read())
+            print(response.read().decode('utf-8'))
 
     except error.HTTPError as e:
         print(f"Error code: {e.code}")
+
+    except error.URLError as e:
+        print(f"{e.reason}")
