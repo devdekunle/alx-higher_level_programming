@@ -20,7 +20,7 @@ if __name__ == "__main__":
     json_response = response.json()
 
     # json_response contains a list of dictionairies of the variables
-    i = 0
-    while i < 10:
+    i = 10
+    while i > 0:
         print(f"{json_response[i]['sha']}: {json_response[i]['commit']['author']['name']}")
-        i += 1
+        i -= 1
