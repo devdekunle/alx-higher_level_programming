@@ -9,7 +9,7 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    url= f"https://api.github.com/users/{argv[1]}"
+    url = f"https://api.github.com/users/{argv[1]}"
     header = {}
     header['Accept'] = 'application/vnd.github+json'
     header['X-GitHub-Api_version'] = "2022-11-28"
