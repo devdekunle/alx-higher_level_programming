@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     count = 0
     while i and count < 10:
-        print(f"{json_response[i]['sha']}: {json_response[i]['commit']['author']['name']}")
+        print(f"{json_response[i].get('sha')}: {json_response[i].get('commit').get('author').get('name')}")
 
         i -= 1
         count += 1
