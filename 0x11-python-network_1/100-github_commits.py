@@ -14,13 +14,17 @@ if __name__ == "__main__":
     url = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits"
     header = {}
     header['Accept'] = 'application/vnd.github+json'
-    header['X-GitHub-Api-Version'] = '2022-11-28'
 
     response = requests.get(url, headers=header)
     json_response = response.json()
 
-    # json_response contains a list of dictionairies of the variables
-    i = 10
-    while i > 0:
+    # json_response contains a list of dictionairies of the variable
+
+    i = len(json_response) - 1
+
+    count = 0
+    while i and count < 10:
         print(f"{json_response[i]['sha']}: {json_response[i]['commit']['author']['name']}")
+
         i -= 1
+        count += 1
