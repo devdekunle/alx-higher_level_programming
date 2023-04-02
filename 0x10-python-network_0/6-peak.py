@@ -28,19 +28,21 @@ def find_peak(list_of_integers):
 
     else:
         i = 0
-        if type(list_of_integers[i]) is not int or type(list_of_integers[i + 1]) is not int:
+        if type(list_of_integers[i]) is not int\
+        or type(list_of_integers[i + 1]) is not int:
             raise TypeError("list must be a list of integers")
         elif list_of_integers[i] >= list_of_integers[i + 1]:
             return list_of_integers[i]
         else:
             i += 1
             while i < len(list_of_integers):
-                if type(list_of_integers[i]) is not int or type(list_of_integers[i - 1]) is not int\
-                or type(list_of_integers[i + 1]) is not int:
+                if type(list_of_integers[i]) is not int\
+                    or type(list_of_integers[i - 1]) is not int\
+                    or type(list_of_integers[i + 1]) is not int:
                     raise TypeError("list must be a list of integers")
-                if list_of_integers[i] >= list_of_integers[i - 1] and list_of_integers[i] >= list_of_integers[i + 1]:
+                if list_of_integers[i] >= list_of_integers[i - 1] and\
+                    list_of_integers[i] >= list_of_integers[i + 1]:
                     return list_of_integers[i]
 
                 else:
                     i += 1
-
