@@ -6,10 +6,11 @@ You must use the GitHub API, here is the documentation
 https://developer.github.com/v3/repos/commits/
 Print all commits by: `<sha>: <author name>` (one by line)
 """
-import requests
-from sys import argv
 
 if __name__ == "__main__":
+
+    import requests
+    from sys import argv
 
     url = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits"
     header = {}
