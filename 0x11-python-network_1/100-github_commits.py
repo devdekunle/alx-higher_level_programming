@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     i = 0
     while i < 10:
-        print(json_response[i].get('sha'), end=": "
+        print(json_response[i].get('sha'), end=": ")
         print(json_response[i].get('commit').get('author').get('name'))
 
         i += 1
