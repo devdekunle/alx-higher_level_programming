@@ -20,11 +20,8 @@ if __name__ == "__main__":
 
     # json_response contains a list of dictionairies of the variable
 
-    i = len(json_response) - 1
-
-    count = 0
-    while i and count < 10:
+    i = 0
+    while i < 10:
         print(f"{json_response[i].get('sha')}: {json_response[i].get('commit').get('author').get('name')}")
 
-        i -= 1
-        count += 1
+        i += 1
